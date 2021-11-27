@@ -1,0 +1,44 @@
+{
+  "name": "your-daily-blog-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "nodemon dist/index.js",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "connect-redis": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "pg": "^8.6.0",
+    "redis": "^3.1.2",
+    "typeorm": "^0.2.32",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/body-parser": "^1.19.0",
+    "@types/connect-redis": "^0.0.17",
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.12",
+    "@types/express-session": "^1.17.3",
+    "@types/moment-timezone": "^0.5.30",
+    "@types/node": "^15.6.1",
+    "@types/node-cron": "^2.0.3",
+    "@types/redis": "^2.8.32",
+    "@types/uuid": "^8.3.0",
+    "nodemon": "^2.0.7",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
