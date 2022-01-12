@@ -1,6 +1,6 @@
-Early-Post-API
+## Early-Post-API
 
-The project uses TypeScript, ExpressJS, TypeORM, Redis. The database required is postgreSQL.
+The project uses TypeScript, ExpressJS, TypeORM, Redis. The database required is PostgreSQL.
 
 1. cd early-post-api.
 2. Configure .env by referring to example file provided.

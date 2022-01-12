@@ -3,7 +3,7 @@ import {Order} from "../entities/Order";
 
 const OrderController = {
     create: async (req: any, res: any) => {
-        if(Object.keys(req.body.orderItems).length === 0){
+        if (Object.keys(req.body.orderItems).length === 0) {
             return res.status(400).send({errors: 'Something went wrong.'})
         }
 
@@ -68,15 +68,15 @@ const OrderController = {
                 .getRepository(Order)
                 .createQueryBuilder('order')
                 .innerJoinAndSelect('order.user', 'user')
-                .where({id: req.params.id,status:'Order Pending'})
+                .where({id: req.params.id, status: 'Order Pending'})
                 .execute()
-            return res.status(201).send({data:result})
-        } catch (err){
-            res.send(400).send({data:'Something went wrong.'})
+            return res.status(201).send({data: result})
+        } catch (err) {
+            res.send(400).send({data: 'Something went wrong.'})
         }
     },
-    updateIndividualPendingOrder: async (req: any, res:any) => {
-        try{
+    updateIndividualPendingOrder: async (req: any, res: any) => {
+        try {
             const result = await getConnection()
                 .createQueryBuilder()
                 .update(Order)
@@ -85,8 +85,7 @@ const OrderController = {
                 .returning("*")
                 .execute();
             return res.status(200).send({data: result})
-        }
-        catch (err) {
+        } catch (err) {
             res.send(500)
         }
     }
